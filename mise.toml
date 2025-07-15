@@ -1,2 +1,14 @@
 [tools]
 bun = "1.2.18"
+
+[hooks]
+postinstall = "bun i --frozen-lockfile"
+
+[tasks.dev]
+run = "bun run dev"
+
+[tasks.build]
+run = "bun run build"
+
+[tasks.zip]
+run = ["bun run zip", "bun run zip:firefox"]
