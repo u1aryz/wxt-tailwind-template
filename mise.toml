@@ -4,6 +4,10 @@ bun = "1.2.18"
 [hooks]
 postinstall = "bun i --frozen-lockfile"
 
+[tasks.format]
+run = ["bun run format", "bun run typecheck"]
+alias = "lint"
+
 [tasks.dev]
 run = "bun run dev"
 
