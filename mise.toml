@@ -1,5 +1,6 @@
 [tools]
 bun = "1.3.2"
+node = "22"
 
 [hooks]
 postinstall = "bun i --frozen-lockfile"
