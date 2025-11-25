@@ -1,0 +1,11 @@
+{
+	"extName": {
+		"message": "wxt-react-starter"
+	},
+	"extDescription": {
+		"message": "Browser extension template"
+	},
+	"popupTitle": {
+		"message": "WXT Template"
+	}
+}
