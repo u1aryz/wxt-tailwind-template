@@ -41,10 +41,11 @@ Outputs an optimized, minified bundle in **`output/`**.
 ### 4. Package as a ZIP
 
 ```bash
-pnpm zip
+pnpm zip            # Chrome
+pnpm zip:firefox    # Firefox
 ```
 
-Generates **`zip`** – ready to upload to Chrome Web Store, Firefox Add-ons.
+Generates ZIP files ready to upload to Chrome Web Store or Firefox Add-ons.
 
 ### 5. Format source code
 
@@ -58,12 +59,13 @@ Runs `Biome` and `tsc --noEmit`.
 
 ## Scripts Reference
 
-| Command       | Description                   |
-| ------------- | ----------------------------- |
-| `pnpm dev`    | Start development server      |
-| `pnpm build`  | Production build to `output/` |
-| `pnpm zip`    | Zip the `output/` folder      |
-| `pnpm format` | Format code                   |
+| Command            | Description                   |
+| ------------------ | ----------------------------- |
+| `pnpm dev`         | Start development server      |
+| `pnpm build`       | Production build to `output/` |
+| `pnpm zip`         | Zip for Chrome                |
+| `pnpm zip:firefox` | Zip for Firefox               |
+| `pnpm format`      | Format code                   |
 
 ---
 
