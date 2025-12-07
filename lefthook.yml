@@ -1,10 +1,10 @@
 pre-commit:
   commands:
     check:
-      run: bunx biome check --write --error-on-warnings --no-errors-on-unmatched --files-ignore-unknown=true {staged_files} && bunx tsc --noEmit
+      run: pnpm biome check --write --error-on-warnings --no-errors-on-unmatched --files-ignore-unknown=true {staged_files} && pnpm tsc --noEmit
       stage_fixed: true
 
 commit-msg:
   commands:
     "lint commit message":
-      run: bunx --no -- commitlint --edit "$1"
+      run: pnpm commitlint --edit "$1"

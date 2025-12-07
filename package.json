@@ -4,6 +4,17 @@
 	"private": true,
 	"version": "0.0.1",
 	"type": "module",
+	"packageManager": "pnpm@10.11.0",
+	"engines": {
+		"node": ">=22"
+	},
+	"pnpm": {
+		"onlyBuiltDependencies": [
+			"esbuild",
+			"lefthook",
+			"spawn-sync"
+		]
+	},
 	"scripts": {
 		"dev": "wxt",
 		"dev:firefox": "wxt -b firefox",
@@ -25,6 +36,7 @@
 		"@biomejs/biome": "2.3.8",
 		"@commitlint/cli": "20.1.0",
 		"@commitlint/config-conventional": "20.0.0",
+		"@commitlint/types": "^20.2.0",
 		"@tailwindcss/vite": "4.1.17",
 		"@types/node": "24.10.1",
 		"@types/react": "19.2.7",

@@ -6,7 +6,8 @@ A minimal starter kit for building browser extensions with **[WXT](https://wxt.d
 
 ## Prerequisites
 
-- [mise](https://mise.jdx.dev/) (`mise settings experimental=true`)
+- [Node.js](https://nodejs.org/) >= 22
+- [pnpm](https://pnpm.io/)
 
 ---
 
@@ -15,20 +16,15 @@ A minimal starter kit for building browser extensions with **[WXT](https://wxt.d
 ### 1. Scaffold a new project
 
 ```bash
-# With bun
-bunx degit u1aryz/wxt-tailwind-template my-extension
-
-# Or with npm
-npx degit u1aryz/wxt-tailwind-template my-extension
-
+pnpm dlx degit u1aryz/wxt-tailwind-template my-extension
 cd my-extension
-mise install
+pnpm install
 ```
 
 ### 2. Start the dev server
 
 ```bash
-mise run dev
+pnpm dev
 ```
 
 - Compiles the extension in watch-mode
@@ -37,7 +33,7 @@ mise run dev
 ### 3. Create a production build
 
 ```bash
-mise run build
+pnpm build
 ```
 
 Outputs an optimized, minified bundle in **`output/`**.
@@ -45,7 +41,7 @@ Outputs an optimized, minified bundle in **`output/`**.
 ### 4. Package as a ZIP
 
 ```bash
-mise run zip
+pnpm zip
 ```
 
 Generates **`zip`** – ready to upload to Chrome Web Store, Firefox Add-ons.
@@ -53,7 +49,7 @@ Generates **`zip`** – ready to upload to Chrome Web Store, Firefox Add-ons.
 ### 5. Format source code
 
 ```bash
-mise run format
+pnpm format
 ```
 
 Runs `Biome` and `tsc --noEmit`.
@@ -62,12 +58,12 @@ Runs `Biome` and `tsc --noEmit`.
 
 ## Scripts Reference
 
-| Command           | Description                   |
-| ----------------- | ----------------------------- |
-| `mise run dev`    | Start development server      |
-| `mise run build`  | Production build to `output/` |
-| `mise run zip`    | Zip the `output/` folder      |
-| `mise run format` | Format code                   |
+| Command       | Description                   |
+| ------------- | ----------------------------- |
+| `pnpm dev`    | Start development server      |
+| `pnpm build`  | Production build to `output/` |
+| `pnpm zip`    | Zip the `output/` folder      |
+| `pnpm format` | Format code                   |
 
 ---
 
