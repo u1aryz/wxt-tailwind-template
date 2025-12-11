@@ -31,7 +31,7 @@ importers:
         specifier: 20.2.0
         version: 20.2.0
       '@commitlint/types':
-        specifier: ^20.2.0
+        specifier: 20.2.0
         version: 20.2.0
       '@tailwindcss/vite':
         specifier: 4.1.17
