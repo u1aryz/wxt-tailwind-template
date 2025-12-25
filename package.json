@@ -8,13 +8,6 @@
 	"engines": {
 		"node": ">=22"
 	},
-	"pnpm": {
-		"onlyBuiltDependencies": [
-			"esbuild",
-			"lefthook",
-			"spawn-sync"
-		]
-	},
 	"scripts": {
 		"preinstall": "lefthook install",
 		"dev": "wxt",
