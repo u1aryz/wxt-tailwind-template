@@ -23,7 +23,7 @@ A minimal starter kit for building browser extensions with **[WXT](https://wxt.d
 ### 1. Scaffold a new project
 
 ```bash
-pnpm dlx degit u1aryz/wxt-tailwind-template my-extension
+pnpm dlx degit u1aryz/wxt-tailwind-template#daisyui my-extension
 cd my-extension
 pnpm install
 ```
