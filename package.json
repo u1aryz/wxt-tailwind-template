@@ -28,9 +28,9 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "2.4.7",
-		"@commitlint/cli": "20.4.4",
-		"@commitlint/config-conventional": "20.4.4",
-		"@commitlint/types": "20.4.4",
+		"@commitlint/cli": "20.5.0",
+		"@commitlint/config-conventional": "20.5.0",
+		"@commitlint/types": "20.5.0",
 		"@tailwindcss/vite": "4.2.1",
 		"@types/node": "25.5.0",
 		"@types/react": "19.2.14",
