@@ -35,7 +35,7 @@
 		"@types/node": "25.5.0",
 		"@types/react": "19.2.14",
 		"@types/react-dom": "19.2.3",
-		"@wxt-dev/module-react": "1.2.1",
+		"@wxt-dev/module-react": "1.2.2",
 		"lefthook": "2.1.4",
 		"tailwindcss": "4.2.1",
 		"typescript": "5.9.3",
