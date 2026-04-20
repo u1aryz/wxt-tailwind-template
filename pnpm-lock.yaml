@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@wxt-dev/webextension-polyfill':
         specifier: ^1.0.0
-        version: 1.0.0(webextension-polyfill@0.12.0)(wxt@0.20.22(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(@types/node@25.6.0)(jiti@2.6.1))
+        version: 1.0.0(webextension-polyfill@0.12.0)(wxt@0.20.23(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(@types/node@25.6.0)(jiti@2.6.1))
       react:
         specifier: ^19.1.0
         version: 19.2.5
@@ -47,7 +47,7 @@ importers:
         version: 19.2.3(@types/react@19.2.14)
       '@wxt-dev/module-react':
         specifier: 1.2.2
-        version: 1.2.2(vite@8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(@types/node@25.6.0)(esbuild@0.27.7)(jiti@2.6.1))(wxt@0.20.22(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(@types/node@25.6.0)(jiti@2.6.1))
+        version: 1.2.2(vite@8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(@types/node@25.6.0)(esbuild@0.27.7)(jiti@2.6.1))(wxt@0.20.23(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(@types/node@25.6.0)(jiti@2.6.1))
       lefthook:
         specifier: 2.1.6
         version: 2.1.6
@@ -58,8 +58,8 @@ importers:
         specifier: 6.0.2
         version: 6.0.2
       wxt:
-        specifier: 0.20.22
-        version: 0.20.22(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(@types/node@25.6.0)(jiti@2.6.1)
+        specifier: 0.20.23
+        version: 0.20.23(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(@types/node@25.6.0)(jiti@2.6.1)
 
 packages:
 
@@ -2162,8 +2162,8 @@ packages:
     resolution: {integrity: sha512-g/eziiSUNBSsdDJtCLB8bdYEUMj4jR7AGeUo96p/3dTafgjHhpF4RiCFPiRILwjQoDXx5MqkBr4fwWtR3Ky4Wg==}
     engines: {node: '>=20'}
 
-  wxt@0.20.22:
-    resolution: {integrity: sha512-njFI77H0dAbK/bQCN8u8QYiusg6GKDPMtsQDCqIfrh1oGHMHgrMEMgeGOlqAltG9OOGGB1DvFYDzTvxqfEKVKQ==}
+  wxt@0.20.23:
+    resolution: {integrity: sha512-CJIRHfgHSZPQGFFNW8LmvL6Cg0m70j5uyalS+G1iIhyxw9MYWIpUQHH4/U1PBJLtlPjQm6pwnJX/Y0IOcaHP5w==}
     engines: {bun: '>=1.2.0', node: '>=20.12.0'}
     hasBin: true
     peerDependencies:
@@ -2721,11 +2721,11 @@ snapshots:
       '@types/filesystem': 0.0.36
       '@types/har-format': 1.2.16
 
-  '@wxt-dev/module-react@1.2.2(vite@8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(@types/node@25.6.0)(esbuild@0.27.7)(jiti@2.6.1))(wxt@0.20.22(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(@types/node@25.6.0)(jiti@2.6.1))':
+  '@wxt-dev/module-react@1.2.2(vite@8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(@types/node@25.6.0)(esbuild@0.27.7)(jiti@2.6.1))(wxt@0.20.23(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(@types/node@25.6.0)(jiti@2.6.1))':
     dependencies:
       '@vitejs/plugin-react': 6.0.1(vite@8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(@types/node@25.6.0)(esbuild@0.27.7)(jiti@2.6.1))
       vite: 8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(@types/node@25.6.0)(esbuild@0.27.7)(jiti@2.6.1)
-      wxt: 0.20.22(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(@types/node@25.6.0)(jiti@2.6.1)
+      wxt: 0.20.23(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(@types/node@25.6.0)(jiti@2.6.1)
     transitivePeerDependencies:
       - '@rolldown/plugin-babel'
       - babel-plugin-react-compiler
@@ -2736,10 +2736,10 @@ snapshots:
       async-mutex: 0.5.0
       dequal: 2.0.3
 
-  '@wxt-dev/webextension-polyfill@1.0.0(webextension-polyfill@0.12.0)(wxt@0.20.22(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(@types/node@25.6.0)(jiti@2.6.1))':
+  '@wxt-dev/webextension-polyfill@1.0.0(webextension-polyfill@0.12.0)(wxt@0.20.23(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(@types/node@25.6.0)(jiti@2.6.1))':
     dependencies:
       webextension-polyfill: 0.12.0
-      wxt: 0.20.22(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(@types/node@25.6.0)(jiti@2.6.1)
+      wxt: 0.20.23(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(@types/node@25.6.0)(jiti@2.6.1)
 
   acorn@8.16.0: {}
 
@@ -4111,7 +4111,7 @@ snapshots:
       is-wsl: 3.1.1
       powershell-utils: 0.1.0
 
-  wxt@0.20.22(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(@types/node@25.6.0)(jiti@2.6.1):
+  wxt@0.20.23(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(@types/node@25.6.0)(jiti@2.6.1):
     dependencies:
       '@1natsu/wait-element': 4.2.0
       '@aklinker1/rollup-plugin-visualizer': 5.12.0
