@@ -1,5 +1,12 @@
 # wxt-tailwind-template
 
+[![CI](https://github.com/u1aryz/wxt-tailwind-template/actions/workflows/ci.yml/badge.svg)](https://github.com/u1aryz/wxt-tailwind-template/actions/workflows/ci.yml)
+[![License](https://img.shields.io/github/license/u1aryz/wxt-tailwind-template)](./LICENSE)
+[![Release](https://img.shields.io/github/v/release/u1aryz/wxt-tailwind-template)](https://github.com/u1aryz/wxt-tailwind-template/releases)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](./docs/CONTRIBUTING.md)
+
+English | [Español](./docs/readme/README_es.md) | [日本語](./docs/readme/README_ja.md) | [한국어](./docs/readme/README_ko.md) | [简体中文](./docs/readme/README_zh-CN.md)
+
 A minimal starter kit for building browser extensions with **[WXT](https://wxt.dev/)** and styling them with **[Tailwind CSS](https://tailwindcss.com/)**.
 
 ---
@@ -66,6 +73,17 @@ Runs `Biome` and `tsc --noEmit`.
 | `pnpm zip`         | Zip for Chrome                |
 | `pnpm zip:firefox` | Zip for Firefox               |
 | `pnpm format`      | Format code                   |
+
+---
+
+## Contributing
+
+Contributions are welcome! Please read the
+[Contributing Guide](./docs/CONTRIBUTING.md) and our
+[Code of Conduct](./docs/CODE_OF_CONDUCT.md) before submitting a pull request.
+
+To report a security vulnerability, please see the
+[Security Policy](./docs/SECURITY.md).
 
 ---
 
