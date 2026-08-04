@@ -15,12 +15,26 @@ jobs:
         with:
           ref: daisyui
           fetch-depth: 0
+      - uses: pnpm/action-setup@08c4be7e2e672a47d11bd04269e27e5f3e8529cb # v6
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7
+        with:
+          node-version-file: package.json
+          cache: pnpm
       - name: Merge main into daisyui
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           if ! git merge origin/main --no-edit; then
-            echo "::error::Merge conflict in: $(git diff --name-only --diff-filter=U | tr '\n' ' '). Resolve manually on the daisyui branch."
-            exit 1
+            conflicts="$(git diff --name-only --diff-filter=U)"
+            if [ "$conflicts" != "pnpm-lock.yaml" ]; then
+              echo "::error::Merge conflict in: $(echo "$conflicts" | tr '\n' ' '). Resolve manually on the daisyui branch."
+              exit 1
+            fi
+
+            echo "Regenerating pnpm-lock.yaml from the merged package.json"
+            git checkout --ours pnpm-lock.yaml
+            pnpm install --lockfile-only
+            git add pnpm-lock.yaml
+            git commit --no-edit
           fi
           git push origin daisyui
