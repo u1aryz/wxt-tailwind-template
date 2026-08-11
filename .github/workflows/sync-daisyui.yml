@@ -15,26 +15,39 @@ jobs:
         with:
           ref: daisyui
           fetch-depth: 0
-      - uses: pnpm/action-setup@08c4be7e2e672a47d11bd04269e27e5f3e8529cb # v6
-      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7
-        with:
-          node-version-file: package.json
-          cache: pnpm
       - name: Merge main into daisyui
+        id: merge
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          if ! git merge origin/main --no-edit; then
-            conflicts="$(git diff --name-only --diff-filter=U)"
-            if [ "$conflicts" != "pnpm-lock.yaml" ]; then
-              echo "::error::Merge conflict in: $(echo "$conflicts" | tr '\n' ' '). Resolve manually on the daisyui branch."
-              exit 1
-            fi
-
-            echo "Regenerating pnpm-lock.yaml from the merged package.json"
-            git checkout --ours pnpm-lock.yaml
-            pnpm install --lockfile-only
-            git add pnpm-lock.yaml
-            git commit --no-edit
+          if git merge origin/main --no-edit; then
+            echo "regenerate_lockfile=false" >> "$GITHUB_OUTPUT"
+            exit 0
           fi
+
+          conflicts="$(git diff --name-only --diff-filter=U)"
+          if [ "$conflicts" != "pnpm-lock.yaml" ]; then
+            echo "::error::Merge conflict in: $(echo "$conflicts" | tr '\n' ' '). Resolve manually on the daisyui branch."
+            exit 1
+          fi
+
+          git checkout --ours pnpm-lock.yaml
+          echo "regenerate_lockfile=true" >> "$GITHUB_OUTPUT"
+      - if: steps.merge.outputs.regenerate_lockfile == 'true'
+        uses: pnpm/action-setup@08c4be7e2e672a47d11bd04269e27e5f3e8529cb # v6
+      - if: steps.merge.outputs.regenerate_lockfile == 'true'
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7
+        with:
+          node-version-file: package.json
+          cache: pnpm
+      - name: Regenerate pnpm lockfile
+        if: steps.merge.outputs.regenerate_lockfile == 'true'
+        run: |
+          echo "Regenerating pnpm-lock.yaml from the merged package.json"
+          pnpm install --lockfile-only --ignore-scripts
+          git add pnpm-lock.yaml
+          git commit --no-edit
+
+      - name: Push daisyui
+        run: |
           git push origin daisyui
