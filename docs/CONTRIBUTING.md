@@ -21,7 +21,11 @@ uphold it.
 ## Prerequisites
 
 - [Node.js](https://nodejs.org/) >= 22
-- [pnpm](https://pnpm.io/) 11 (see the `packageManager` field in `package.json`)
+- [pnpm](https://pnpm.io/) 11 (see `devEngines.packageManager` in
+  `package.json`)
+
+Any compatible pnpm 11 version can be used. A version mismatch does not trigger
+an automatic package-manager download.
 
 ## Development Setup
 
