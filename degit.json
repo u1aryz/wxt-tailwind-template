@@ -1,6 +1,14 @@
 [
 	{
 		"action": "remove",
-		"files": ["LICENSE", "README.md", "renovate.json", "docs"]
+		"files": [
+			"LICENSE",
+			"README.md",
+			"renovate.json",
+			"docs",
+			".github/workflows/sync-daisyui.yml",
+			"AGENTS.md",
+			"CLAUDE.md"
+		]
 	}
 ]
