@@ -67,7 +67,7 @@ importers:
         specifier: 7.0.2
         version: 7.0.2
       web-ext:
-        specifier: ^10.6.0
+        specifier: 10.6.0
         version: 10.6.0(jiti@2.7.0)
       wxt:
         specifier: 0.21.4
@@ -4353,7 +4353,7 @@ snapshots:
       ky: 1.14.3
       registry-auth-token: 5.1.1
       registry-url: 6.0.1
-      semver: 7.7.4
+      semver: 7.8.5
 
   pako@1.0.11: {}
 
@@ -4765,7 +4765,7 @@ snapshots:
       is-npm: 6.1.0
       latest-version: 9.0.0
       pupa: 3.3.0
-      semver: 7.7.4
+      semver: 7.8.5
       xdg-basedir: 5.1.0
 
   uri-js@4.4.1:
