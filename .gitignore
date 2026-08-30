@@ -12,6 +12,9 @@ node_modules
 output
 stats.html
 stats-*.json
+test-results/
+playwright-report/
+.playwright-cli/
 .wxt
 web-ext.config.ts
 
