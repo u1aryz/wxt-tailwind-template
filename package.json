@@ -42,7 +42,7 @@
 		"@types/react": "19.2.18",
 		"@types/react-dom": "19.2.5",
 		"@wxt-dev/module-react": "1.2.2",
-		"lefthook": "2.1.10",
+		"lefthook": "2.1.12",
 		"tailwindcss": "4.3.3",
 		"typescript": "7.0.2",
 		"web-ext": "10.6.0",
