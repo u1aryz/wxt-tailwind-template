@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@wxt-dev/webextension-polyfill':
         specifier: ^1.0.0
-        version: 1.0.0(webextension-polyfill@0.12.0)(wxt@0.21.4(eslint@9.39.4(jiti@2.7.0)(supports-color@7.2.0))(typescript@7.0.2)(vite@8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(@types/node@25.9.5)(esbuild@0.27.7)(jiti@2.7.0))(web-ext@10.6.0(jiti@2.7.0)(supports-color@7.2.0)))
+        version: 1.0.0(webextension-polyfill@0.12.0)(wxt@0.21.4(eslint@9.39.4(jiti@2.7.0))(typescript@7.0.2)(vite@8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(@types/node@25.9.6)(esbuild@0.27.7)(jiti@2.7.0))(web-ext@10.6.0(jiti@2.7.0)))
       cn:
         specifier: ^0.2.1
         version: 0.2.1
@@ -29,7 +29,7 @@ importers:
         version: 2.5.12
       '@commitlint/cli':
         specifier: 21.2.2
-        version: 21.2.2(@types/node@25.9.5)(typescript@7.0.2)
+        version: 21.2.2(@types/node@25.9.6)(typescript@7.0.2)
       '@commitlint/config-conventional':
         specifier: 21.2.2
         version: 21.2.2
@@ -38,10 +38,10 @@ importers:
         version: 21.2.0
       '@tailwindcss/vite':
         specifier: 4.3.3
-        version: 4.3.3(vite@8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(@types/node@25.9.5)(esbuild@0.27.7)(jiti@2.7.0))
+        version: 4.3.3(vite@8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(@types/node@25.9.6)(esbuild@0.27.7)(jiti@2.7.0))
       '@types/node':
-        specifier: 25.9.5
-        version: 25.9.5
+        specifier: 25.9.6
+        version: 25.9.6
       '@types/react':
         specifier: 19.2.18
         version: 19.2.18
@@ -50,7 +50,7 @@ importers:
         version: 19.2.7(@types/react@19.2.18)
       '@wxt-dev/module-react':
         specifier: 1.2.2
-        version: 1.2.2(vite@8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(@types/node@25.9.5)(esbuild@0.27.7)(jiti@2.7.0))(wxt@0.21.4(eslint@9.39.4(jiti@2.7.0)(supports-color@7.2.0))(typescript@7.0.2)(vite@8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(@types/node@25.9.5)(esbuild@0.27.7)(jiti@2.7.0))(web-ext@10.6.0(jiti@2.7.0)(supports-color@7.2.0)))
+        version: 1.2.2(vite@8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(@types/node@25.9.6)(esbuild@0.27.7)(jiti@2.7.0))(wxt@0.21.4(eslint@9.39.4(jiti@2.7.0))(typescript@7.0.2)(vite@8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(@types/node@25.9.6)(esbuild@0.27.7)(jiti@2.7.0))(web-ext@10.6.0(jiti@2.7.0)))
       daisyui:
         specifier: ^5.5.5
         version: 5.7.0
@@ -65,10 +65,10 @@ importers:
         version: 7.0.2
       web-ext:
         specifier: 10.6.0
-        version: 10.6.0(jiti@2.7.0)(supports-color@7.2.0)
+        version: 10.6.0(jiti@2.7.0)
       wxt:
         specifier: 0.21.4
-        version: 0.21.4(eslint@9.39.4(jiti@2.7.0)(supports-color@7.2.0))(typescript@7.0.2)(vite@8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(@types/node@25.9.5)(esbuild@0.27.7)(jiti@2.7.0))(web-ext@10.6.0(jiti@2.7.0)(supports-color@7.2.0))
+        version: 0.21.4(eslint@9.39.4(jiti@2.7.0))(typescript@7.0.2)(vite@8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(@types/node@25.9.6)(esbuild@0.27.7)(jiti@2.7.0))(web-ext@10.6.0(jiti@2.7.0))
 
 packages:
 
@@ -769,8 +769,8 @@ packages:
   '@types/minimatch@3.0.5':
     resolution: {integrity: sha512-Klz949h02Gz2uZCMGwDUSDS1YBlTdDDgbWHi+81l29tQALUtvz4rAYi5uoVhE5Lagoq6DeqAUlbrHvW/mXDgdQ==}
 
-  '@types/node@25.9.5':
-    resolution: {integrity: sha512-OScDchr2fwuUmWdf4kZ9h7PcJiYDVInhJizG/biAq3cAvqwYktuy/TYGGdZNMtNTFUP7rnb0NU4TUdm82kt4Rg==}
+  '@types/node@25.9.6':
+    resolution: {integrity: sha512-JR6Q/PV5DKFvjrGFVqQJdeG0qvsqQQLDa3TzFrqVwhqRXqwNaxPo2KYCtCQXpOdIulCouKwT7a6in9nFthBAzw==}
 
   '@types/react-dom@19.2.7':
     resolution: {integrity: sha512-I8bPpDLcHBv1qiIiXDCy71Rt8eQDKJP0sMSWJphDdAcdqiJ1sGpZamavoEIRZmYzjia9LuEb2HlYdDpmoENpvQ==}
@@ -2686,12 +2686,12 @@ snapshots:
   '@biomejs/cli-win32-x64@2.5.12':
     optional: true
 
-  '@commitlint/cli@21.2.2(@types/node@25.9.5)(typescript@7.0.2)':
+  '@commitlint/cli@21.2.2(@types/node@25.9.6)(typescript@7.0.2)':
     dependencies:
       '@commitlint/config-conventional': 21.2.2
       '@commitlint/format': 21.2.2
       '@commitlint/lint': 21.2.2
-      '@commitlint/load': 21.2.2(@types/node@25.9.5)(typescript@7.0.2)
+      '@commitlint/load': 21.2.2(@types/node@25.9.6)(typescript@7.0.2)
       '@commitlint/read': 21.2.1
       '@commitlint/types': 21.2.0
       tinyexec: 1.3.0
@@ -2736,14 +2736,14 @@ snapshots:
       '@commitlint/rules': 21.2.2
       '@commitlint/types': 21.2.0
 
-  '@commitlint/load@21.2.2(@types/node@25.9.5)(typescript@7.0.2)':
+  '@commitlint/load@21.2.2(@types/node@25.9.6)(typescript@7.0.2)':
     dependencies:
       '@commitlint/config-validator': 21.2.0
       '@commitlint/execute-rule': 21.0.1
       '@commitlint/resolve-extends': 21.2.2
       '@commitlint/types': 21.2.0
       cosmiconfig: 9.0.1(typescript@7.0.2)
-      cosmiconfig-typescript-loader: 6.2.0(@types/node@25.9.5)(cosmiconfig@9.0.1(typescript@7.0.2))(typescript@7.0.2)
+      cosmiconfig-typescript-loader: 6.2.0(@types/node@25.9.6)(cosmiconfig@9.0.1(typescript@7.0.2))(typescript@7.0.2)
       es-toolkit: 1.46.1
       is-plain-obj: 4.1.0
       picocolors: 1.1.1
@@ -2807,13 +2807,13 @@ snapshots:
 
   '@devicefarmer/adbkit-monkey@1.2.1': {}
 
-  '@devicefarmer/adbkit@3.3.9(supports-color@7.2.0)':
+  '@devicefarmer/adbkit@3.3.9':
     dependencies:
       '@devicefarmer/adbkit-logcat': 2.1.3
       '@devicefarmer/adbkit-monkey': 1.2.1
       bluebird: 3.7.2
       commander: 9.5.0
-      debug: 4.3.7(supports-color@7.2.0)
+      debug: 4.3.7
       node-forge: 1.4.0
       split: 1.0.1
     transitivePeerDependencies:
@@ -2913,17 +2913,17 @@ snapshots:
   '@esbuild/win32-x64@0.27.7':
     optional: true
 
-  '@eslint-community/eslint-utils@4.10.1(eslint@9.39.4(jiti@2.7.0)(supports-color@7.2.0))':
+  '@eslint-community/eslint-utils@4.10.1(eslint@9.39.4(jiti@2.7.0))':
     dependencies:
-      eslint: 9.39.4(jiti@2.7.0)(supports-color@7.2.0)
+      eslint: 9.39.4(jiti@2.7.0)
       eslint-visitor-keys: 3.4.3
 
   '@eslint-community/regexpp@4.12.2': {}
 
-  '@eslint/config-array@0.21.2(supports-color@7.2.0)':
+  '@eslint/config-array@0.21.2':
     dependencies:
       '@eslint/object-schema': 2.1.7
-      debug: 4.4.3(supports-color@7.2.0)
+      debug: 4.4.3
       minimatch: 3.1.5
     transitivePeerDependencies:
       - supports-color
@@ -2936,10 +2936,10 @@ snapshots:
     dependencies:
       '@types/json-schema': 7.0.15
 
-  '@eslint/eslintrc@3.3.6(supports-color@7.2.0)':
+  '@eslint/eslintrc@3.3.6':
     dependencies:
       ajv: 6.15.0
-      debug: 4.4.3(supports-color@7.2.0)
+      debug: 4.4.3
       espree: 10.4.0
       globals: 14.0.0
       ignore: 5.3.2
@@ -3144,12 +3144,12 @@ snapshots:
       '@tailwindcss/oxide-win32-arm64-msvc': 4.3.3
       '@tailwindcss/oxide-win32-x64-msvc': 4.3.3
 
-  '@tailwindcss/vite@4.3.3(vite@8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(@types/node@25.9.5)(esbuild@0.27.7)(jiti@2.7.0))':
+  '@tailwindcss/vite@4.3.3(vite@8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(@types/node@25.9.6)(esbuild@0.27.7)(jiti@2.7.0))':
     dependencies:
       '@tailwindcss/node': 4.3.3
       '@tailwindcss/oxide': 4.3.3
       tailwindcss: 4.3.3
-      vite: 8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(@types/node@25.9.5)(esbuild@0.27.7)(jiti@2.7.0)
+      vite: 8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(@types/node@25.9.6)(esbuild@0.27.7)(jiti@2.7.0)
 
   '@topcli/prompts@4.0.0': {}
 
@@ -3172,7 +3172,7 @@ snapshots:
 
   '@types/minimatch@3.0.5': {}
 
-  '@types/node@25.9.5':
+  '@types/node@25.9.6':
     dependencies:
       undici-types: 7.24.6
 
@@ -3244,10 +3244,10 @@ snapshots:
   '@typescript/typescript-win32-x64@7.0.2':
     optional: true
 
-  '@vitejs/plugin-react@6.0.1(vite@8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(@types/node@25.9.5)(esbuild@0.27.7)(jiti@2.7.0))':
+  '@vitejs/plugin-react@6.0.1(vite@8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(@types/node@25.9.6)(esbuild@0.27.7)(jiti@2.7.0))':
     dependencies:
       '@rolldown/pluginutils': 1.0.0-rc.7
-      vite: 8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(@types/node@25.9.5)(esbuild@0.27.7)(jiti@2.7.0)
+      vite: 8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(@types/node@25.9.6)(esbuild@0.27.7)(jiti@2.7.0)
 
   '@webext-core/fake-browser@2.0.1':
     dependencies:
@@ -3270,11 +3270,11 @@ snapshots:
       '@types/filesystem': 0.0.36
       '@types/har-format': 1.2.16
 
-  '@wxt-dev/module-react@1.2.2(vite@8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(@types/node@25.9.5)(esbuild@0.27.7)(jiti@2.7.0))(wxt@0.21.4(eslint@9.39.4(jiti@2.7.0)(supports-color@7.2.0))(typescript@7.0.2)(vite@8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(@types/node@25.9.5)(esbuild@0.27.7)(jiti@2.7.0))(web-ext@10.6.0(jiti@2.7.0)(supports-color@7.2.0)))':
+  '@wxt-dev/module-react@1.2.2(vite@8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(@types/node@25.9.6)(esbuild@0.27.7)(jiti@2.7.0))(wxt@0.21.4(eslint@9.39.4(jiti@2.7.0))(typescript@7.0.2)(vite@8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(@types/node@25.9.6)(esbuild@0.27.7)(jiti@2.7.0))(web-ext@10.6.0(jiti@2.7.0)))':
     dependencies:
-      '@vitejs/plugin-react': 6.0.1(vite@8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(@types/node@25.9.5)(esbuild@0.27.7)(jiti@2.7.0))
-      vite: 8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(@types/node@25.9.5)(esbuild@0.27.7)(jiti@2.7.0)
-      wxt: 0.21.4(eslint@9.39.4(jiti@2.7.0)(supports-color@7.2.0))(typescript@7.0.2)(vite@8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(@types/node@25.9.5)(esbuild@0.27.7)(jiti@2.7.0))(web-ext@10.6.0(jiti@2.7.0)(supports-color@7.2.0))
+      '@vitejs/plugin-react': 6.0.1(vite@8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(@types/node@25.9.6)(esbuild@0.27.7)(jiti@2.7.0))
+      vite: 8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(@types/node@25.9.6)(esbuild@0.27.7)(jiti@2.7.0)
+      wxt: 0.21.4(eslint@9.39.4(jiti@2.7.0))(typescript@7.0.2)(vite@8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(@types/node@25.9.6)(esbuild@0.27.7)(jiti@2.7.0))(web-ext@10.6.0(jiti@2.7.0))
     transitivePeerDependencies:
       - '@rolldown/plugin-babel'
       - babel-plugin-react-compiler
@@ -3285,10 +3285,10 @@ snapshots:
       async-mutex: 0.5.0
       dequal: 2.0.3
 
-  '@wxt-dev/webextension-polyfill@1.0.0(webextension-polyfill@0.12.0)(wxt@0.21.4(eslint@9.39.4(jiti@2.7.0)(supports-color@7.2.0))(typescript@7.0.2)(vite@8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(@types/node@25.9.5)(esbuild@0.27.7)(jiti@2.7.0))(web-ext@10.6.0(jiti@2.7.0)(supports-color@7.2.0)))':
+  '@wxt-dev/webextension-polyfill@1.0.0(webextension-polyfill@0.12.0)(wxt@0.21.4(eslint@9.39.4(jiti@2.7.0))(typescript@7.0.2)(vite@8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(@types/node@25.9.6)(esbuild@0.27.7)(jiti@2.7.0))(web-ext@10.6.0(jiti@2.7.0)))':
     dependencies:
       webextension-polyfill: 0.12.0
-      wxt: 0.21.4(eslint@9.39.4(jiti@2.7.0)(supports-color@7.2.0))(typescript@7.0.2)(vite@8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(@types/node@25.9.5)(esbuild@0.27.7)(jiti@2.7.0))(web-ext@10.6.0(jiti@2.7.0)(supports-color@7.2.0))
+      wxt: 0.21.4(eslint@9.39.4(jiti@2.7.0))(typescript@7.0.2)(vite@8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(@types/node@25.9.6)(esbuild@0.27.7)(jiti@2.7.0))(web-ext@10.6.0(jiti@2.7.0))
 
   acorn-jsx@5.3.2(acorn@8.16.0):
     dependencies:
@@ -3296,7 +3296,7 @@ snapshots:
 
   acorn@8.16.0: {}
 
-  addons-linter@10.10.0(jiti@2.7.0)(supports-color@7.2.0):
+  addons-linter@10.10.0(jiti@2.7.0):
     dependencies:
       '@fluent/syntax': 0.19.0
       '@fregante/relaxed-json': 2.0.0
@@ -3309,8 +3309,8 @@ snapshots:
       common-tags: 1.8.2
       css-tree: 3.2.1
       deepmerge: 4.3.1
-      eslint: 9.39.4(jiti@2.7.0)(supports-color@7.2.0)
-      eslint-plugin-no-unsanitized: 4.1.5(eslint@9.39.4(jiti@2.7.0)(supports-color@7.2.0))
+      eslint: 9.39.4(jiti@2.7.0)
+      eslint-plugin-no-unsanitized: 4.1.5(eslint@9.39.4(jiti@2.7.0))
       eslint-visitor-keys: 5.0.1
       espree: 11.2.0
       esprima: 4.0.1
@@ -3487,12 +3487,12 @@ snapshots:
     dependencies:
       readdirp: 5.0.0
 
-  chrome-launcher@1.2.0(supports-color@7.2.0):
+  chrome-launcher@1.2.0:
     dependencies:
-      '@types/node': 25.9.5
+      '@types/node': 25.9.6
       escape-string-regexp: 4.0.0
       is-wsl: 2.2.0
-      lighthouse-logger: 2.0.2(supports-color@7.2.0)
+      lighthouse-logger: 2.0.2
     transitivePeerDependencies:
       - supports-color
 
@@ -3568,9 +3568,9 @@ snapshots:
 
   core-util-is@1.0.3: {}
 
-  cosmiconfig-typescript-loader@6.2.0(@types/node@25.9.5)(cosmiconfig@9.0.1(typescript@7.0.2))(typescript@7.0.2):
+  cosmiconfig-typescript-loader@6.2.0(@types/node@25.9.6)(cosmiconfig@9.0.1(typescript@7.0.2))(typescript@7.0.2):
     dependencies:
-      '@types/node': 25.9.5
+      '@types/node': 25.9.6
       cosmiconfig: 9.0.1(typescript@7.0.2)
       jiti: 2.7.0
       typescript: 7.0.2
@@ -3613,17 +3613,13 @@ snapshots:
 
   debounce@1.2.1: {}
 
-  debug@4.3.7(supports-color@7.2.0):
+  debug@4.3.7:
     dependencies:
       ms: 2.1.3
-    optionalDependencies:
-      supports-color: 7.2.0
 
-  debug@4.4.3(supports-color@7.2.0):
+  debug@4.4.3:
     dependencies:
       ms: 2.1.3
-    optionalDependencies:
-      supports-color: 7.2.0
 
   decamelize@6.0.1: {}
 
@@ -3756,9 +3752,9 @@ snapshots:
 
   escape-string-regexp@5.0.0: {}
 
-  eslint-plugin-no-unsanitized@4.1.5(eslint@9.39.4(jiti@2.7.0)(supports-color@7.2.0)):
+  eslint-plugin-no-unsanitized@4.1.5(eslint@9.39.4(jiti@2.7.0)):
     dependencies:
-      eslint: 9.39.4(jiti@2.7.0)(supports-color@7.2.0)
+      eslint: 9.39.4(jiti@2.7.0)
 
   eslint-scope@8.4.0:
     dependencies:
@@ -3771,14 +3767,14 @@ snapshots:
 
   eslint-visitor-keys@5.0.1: {}
 
-  eslint@9.39.4(jiti@2.7.0)(supports-color@7.2.0):
+  eslint@9.39.4(jiti@2.7.0):
     dependencies:
-      '@eslint-community/eslint-utils': 4.10.1(eslint@9.39.4(jiti@2.7.0)(supports-color@7.2.0))
+      '@eslint-community/eslint-utils': 4.10.1(eslint@9.39.4(jiti@2.7.0))
       '@eslint-community/regexpp': 4.12.2
-      '@eslint/config-array': 0.21.2(supports-color@7.2.0)
+      '@eslint/config-array': 0.21.2
       '@eslint/config-helpers': 0.4.2
       '@eslint/core': 0.17.0
-      '@eslint/eslintrc': 3.3.6(supports-color@7.2.0)
+      '@eslint/eslintrc': 3.3.6
       '@eslint/js': 9.39.4
       '@eslint/plugin-kit': 0.4.1
       '@humanfs/node': 0.16.8
@@ -3788,7 +3784,7 @@ snapshots:
       ajv: 6.15.0
       chalk: 4.1.2
       cross-spawn: 7.0.6
-      debug: 4.4.3(supports-color@7.2.0)
+      debug: 4.4.3
       escape-string-regexp: 4.0.0
       eslint-scope: 8.4.0
       eslint-visitor-keys: 4.2.1
@@ -3943,10 +3939,10 @@ snapshots:
       domutils: 3.2.2
       entities: 7.0.1
 
-  https-proxy-agent@7.0.6(supports-color@7.2.0):
+  https-proxy-agent@7.0.6:
     dependencies:
       agent-base: 7.1.4
-      debug: 4.4.3(supports-color@7.2.0)
+      debug: 4.4.3
     transitivePeerDependencies:
       - supports-color
 
@@ -4161,9 +4157,9 @@ snapshots:
     dependencies:
       immediate: 3.0.6
 
-  lighthouse-logger@2.0.2(supports-color@7.2.0):
+  lighthouse-logger@2.0.2:
     dependencies:
-      debug: 4.4.3(supports-color@7.2.0)
+      debug: 4.4.3
       marky: 1.3.0
     transitivePeerDependencies:
       - supports-color
@@ -4771,7 +4767,7 @@ snapshots:
 
   util-deprecate@1.0.2: {}
 
-  vite@8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(@types/node@25.9.5)(esbuild@0.27.7)(jiti@2.7.0):
+  vite@8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(@types/node@25.9.6)(esbuild@0.27.7)(jiti@2.7.0):
     dependencies:
       lightningcss: 1.32.0
       picomatch: 4.0.4
@@ -4779,7 +4775,7 @@ snapshots:
       rolldown: 1.0.0-rc.12(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)
       tinyglobby: 0.2.17
     optionalDependencies:
-      '@types/node': 25.9.5
+      '@types/node': 25.9.6
       esbuild: 0.27.7
       fsevents: 2.3.3
       jiti: 2.7.0
@@ -4795,19 +4791,19 @@ snapshots:
     dependencies:
       defaults: 1.0.4
 
-  web-ext@10.6.0(jiti@2.7.0)(supports-color@7.2.0):
+  web-ext@10.6.0(jiti@2.7.0):
     dependencies:
       '@babel/runtime': 8.0.0
-      '@devicefarmer/adbkit': 3.3.9(supports-color@7.2.0)
-      addons-linter: 10.10.0(jiti@2.7.0)(supports-color@7.2.0)
+      '@devicefarmer/adbkit': 3.3.9
+      addons-linter: 10.10.0(jiti@2.7.0)
       camelcase: 8.0.0
-      chrome-launcher: 1.2.0(supports-color@7.2.0)
+      chrome-launcher: 1.2.0
       debounce: 1.2.1
       decamelize: 6.0.1
       es6-error: 4.1.1
       firefox-profile: 4.7.1
       fx-runner: 1.6.0
-      https-proxy-agent: 7.0.6(supports-color@7.2.0)
+      https-proxy-agent: 7.0.6
       jose: 5.9.6
       jszip: 3.10.1
       multimatch: 6.0.0
@@ -4874,7 +4870,7 @@ snapshots:
       is-wsl: 3.1.1
       powershell-utils: 0.1.0
 
-  wxt@0.21.4(eslint@9.39.4(jiti@2.7.0)(supports-color@7.2.0))(typescript@7.0.2)(vite@8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(@types/node@25.9.5)(esbuild@0.27.7)(jiti@2.7.0))(web-ext@10.6.0(jiti@2.7.0)(supports-color@7.2.0)):
+  wxt@0.21.4(eslint@9.39.4(jiti@2.7.0))(typescript@7.0.2)(vite@8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(@types/node@25.9.6)(esbuild@0.27.7)(jiti@2.7.0))(web-ext@10.6.0(jiti@2.7.0)):
     dependencies:
       '@1natsu/wait-element': 4.2.0
       '@aklinker1/rollup-plugin-visualizer': 5.12.0
@@ -4905,11 +4901,11 @@ snapshots:
       tinyexec: 1.3.0
       tinyglobby: 0.2.17
       unimport: 6.0.2
-      vite: 8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(@types/node@25.9.5)(esbuild@0.27.7)(jiti@2.7.0)
+      vite: 8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(@types/node@25.9.6)(esbuild@0.27.7)(jiti@2.7.0)
     optionalDependencies:
-      eslint: 9.39.4(jiti@2.7.0)(supports-color@7.2.0)
+      eslint: 9.39.4(jiti@2.7.0)
       typescript: 7.0.2
-      web-ext: 10.6.0(jiti@2.7.0)(supports-color@7.2.0)
+      web-ext: 10.6.0(jiti@2.7.0)
     transitivePeerDependencies:
       - canvas
       - rollup
