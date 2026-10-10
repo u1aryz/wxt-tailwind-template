@@ -7,6 +7,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: sync-daisyui
+  cancel-in-progress: false
+
 jobs:
   merge:
     runs-on: ubuntu-latest
@@ -26,12 +30,29 @@ jobs:
           fi
 
           conflicts="$(git diff --name-only --diff-filter=U)"
-          if [ "$conflicts" != "pnpm-lock.yaml" ]; then
-            echo "::error::Merge conflict in: $(echo "$conflicts" | tr '\n' ' '). Resolve manually on the daisyui branch."
+          if [ -z "$conflicts" ]; then
+            echo "::error::Merge failed without file conflicts."
             exit 1
           fi
+          while IFS= read -r file; do
+            case "$file" in
+              package.json|pnpm-lock.yaml) ;;
+              *)
+                echo "::error::Merge conflict in: $file. Resolve manually on the daisyui branch."
+                exit 1
+                ;;
+            esac
+          done <<< "$conflicts"
 
-          git checkout --ours pnpm-lock.yaml
+          if grep -qx 'package.json' <<< "$conflicts"; then
+            # Use the script from main, even if daisyui has not received it yet.
+            git show origin/main:.github/scripts/merge-package-json.mjs > "$RUNNER_TEMP/merge-package-json.mjs"
+            node "$RUNNER_TEMP/merge-package-json.mjs"
+            git add package.json
+          fi
+          if grep -qx 'pnpm-lock.yaml' <<< "$conflicts"; then
+            git checkout --ours pnpm-lock.yaml
+          fi
           echo "regenerate_lockfile=true" >> "$GITHUB_OUTPUT"
       - if: steps.merge.outputs.regenerate_lockfile == 'true'
         uses: pnpm/action-setup@08c4be7e2e672a47d11bd04269e27e5f3e8529cb # v6
@@ -44,7 +65,7 @@ jobs:
         if: steps.merge.outputs.regenerate_lockfile == 'true'
         run: |
           echo "Regenerating pnpm-lock.yaml from the merged package.json"
-          pnpm install --lockfile-only --ignore-scripts
+          pnpm install --lockfile-only --ignore-scripts --no-frozen-lockfile
           git add pnpm-lock.yaml
           git commit --no-edit
 
