@@ -20,5 +20,6 @@ jobs:
           cache: pnpm
       - run: pnpm install --frozen-lockfile
       - run: pnpm biome check
+      - run: node --test .github/scripts/*.test.mjs
       - run: pnpm typecheck
       - run: pnpm build
