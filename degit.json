@@ -8,6 +8,7 @@
 			"docs",
 			".github/workflows/sync-daisyui.yml",
 			".github/scripts/merge-package-json.mjs",
+			".github/scripts/merge-package-json.test.mjs",
 			"AGENTS.md",
 			"CLAUDE.md"
 		]
