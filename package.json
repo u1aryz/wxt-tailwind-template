@@ -1,6 +1,6 @@
 {
-	"name": "wxt-react-starter",
-	"description": "manifest.json description",
+	"name": "wxt-tailwind-template",
+	"description": "Browser extension template",
 	"private": true,
 	"version": "0.0.1",
 	"type": "module",
