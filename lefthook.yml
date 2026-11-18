@@ -1,7 +1,7 @@
 pre-commit:
   commands:
     check:
-      run: pnpm biome check --write --error-on-warnings --no-errors-on-unmatched --files-ignore-unknown=true {staged_files} && pnpm tsc --noEmit
+      run: pnpm biome check --write --error-on-warnings --no-errors-on-unmatched --files-ignore-unknown=true {staged_files} && pnpm typecheck
       stage_fixed: true
 
 commit-msg:
