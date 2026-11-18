@@ -66,13 +66,13 @@ pnpm format
 
 ## スクリプト一覧
 
-| コマンド           | 説明                                 |
-| ------------------ | ------------------------------------ |
-| `pnpm dev`         | 開発サーバーを起動                   |
-| `pnpm build`       | `output/` へプロダクションビルド     |
-| `pnpm zip`         | Chrome 向けに ZIP 化                 |
-| `pnpm zip:firefox` | Firefox 向けに ZIP 化                |
-| `pnpm format`      | コードをフォーマット                 |
+| コマンド           | 説明                             |
+| ------------------ | -------------------------------- |
+| `pnpm dev`         | 開発サーバーを起動               |
+| `pnpm build`       | `output/` へプロダクションビルド |
+| `pnpm zip`         | Chrome 向けに ZIP 化             |
+| `pnpm zip:firefox` | Firefox 向けに ZIP 化            |
+| `pnpm format`      | コードをフォーマット             |
 
 ---
 

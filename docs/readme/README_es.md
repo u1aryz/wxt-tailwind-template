@@ -66,13 +66,13 @@ Ejecuta `Biome` y `tsc --noEmit`.
 
 ## Referencia de scripts
 
-| Comando            | Descripción                          |
-| ------------------ | ------------------------------------ |
-| `pnpm dev`         | Iniciar el servidor de desarrollo    |
-| `pnpm build`       | Build de producción en `output/`     |
-| `pnpm zip`         | ZIP para Chrome                      |
-| `pnpm zip:firefox` | ZIP para Firefox                     |
-| `pnpm format`      | Formatear el código                  |
+| Comando            | Descripción                       |
+| ------------------ | --------------------------------- |
+| `pnpm dev`         | Iniciar el servidor de desarrollo |
+| `pnpm build`       | Build de producción en `output/`  |
+| `pnpm zip`         | ZIP para Chrome                   |
+| `pnpm zip:firefox` | ZIP para Firefox                  |
+| `pnpm format`      | Formatear el código               |
 
 ---
 

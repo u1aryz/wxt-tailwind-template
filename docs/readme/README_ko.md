@@ -66,13 +66,13 @@ pnpm format
 
 ## 스크립트 목록
 
-| 명령어             | 설명                              |
-| ------------------ | --------------------------------- |
-| `pnpm dev`         | 개발 서버 시작                    |
-| `pnpm build`       | `output/` 에 프로덕션 빌드        |
-| `pnpm zip`         | Chrome용 ZIP 생성                 |
-| `pnpm zip:firefox` | Firefox용 ZIP 생성                |
-| `pnpm format`      | 코드 포맷팅                       |
+| 명령어             | 설명                       |
+| ------------------ | -------------------------- |
+| `pnpm dev`         | 개발 서버 시작             |
+| `pnpm build`       | `output/` 에 프로덕션 빌드 |
+| `pnpm zip`         | Chrome용 ZIP 생성          |
+| `pnpm zip:firefox` | Firefox용 ZIP 생성         |
+| `pnpm format`      | 코드 포맷팅                |
 
 ---
 

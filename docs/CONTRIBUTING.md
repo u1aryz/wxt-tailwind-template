@@ -56,11 +56,11 @@ an automatic package-manager download.
 
 ## Useful Scripts
 
-| Command          | Description                                  |
-| ---------------- | -------------------------------------------- |
-| `pnpm dev`       | Start development server                     |
-| `pnpm build`     | Production build to `output/`                |
-| `pnpm typecheck` | Type-check with `tsc --noEmit`               |
+| Command          | Description                                        |
+| ---------------- | -------------------------------------------------- |
+| `pnpm dev`       | Start development server                           |
+| `pnpm build`     | Production build to `output/`                      |
+| `pnpm typecheck` | Type-check with `tsc --noEmit`                     |
 | `pnpm format`    | Format and lint with [Biome](https://biomejs.dev/) |
 
 ## Coding Style

@@ -66,13 +66,13 @@ pnpm format
 
 ## 脚本参考
 
-| 命令               | 说明                          |
-| ------------------ | ----------------------------- |
-| `pnpm dev`         | 启动开发服务器                |
-| `pnpm build`       | 生产构建到 `output/`          |
-| `pnpm zip`         | 为 Chrome 打包 ZIP            |
-| `pnpm zip:firefox` | 为 Firefox 打包 ZIP           |
-| `pnpm format`      | 格式化代码                    |
+| 命令               | 说明                 |
+| ------------------ | -------------------- |
+| `pnpm dev`         | 启动开发服务器       |
+| `pnpm build`       | 生产构建到 `output/` |
+| `pnpm zip`         | 为 Chrome 打包 ZIP   |
+| `pnpm zip:firefox` | 为 Firefox 打包 ZIP  |
+| `pnpm format`      | 格式化代码           |
 
 ---
 
