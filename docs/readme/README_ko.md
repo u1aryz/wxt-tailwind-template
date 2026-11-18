@@ -14,7 +14,7 @@
 ## 사전 요구 사항
 
 - [Node.js](https://nodejs.org/) >= 22
-- [pnpm](https://pnpm.io/)
+- [pnpm](https://pnpm.io/) 12
 
 ---
 
@@ -25,8 +25,11 @@
 ```bash
 pnpm dlx degit u1aryz/wxt-tailwind-template my-extension
 cd my-extension
+git init
 pnpm install
 ```
+
+`pnpm install` 전에 `git init` 을 실행하면 Git 훅(Biome 검사와 commitlint)이 설치됩니다. 이미 `pnpm install` 을 실행했다면 `pnpm lefthook install` 을 실행하세요.
 
 ### 2. 개발 서버 시작
 
@@ -60,19 +63,22 @@ Chrome Web Store 또는 Firefox Add-ons에 바로 업로드할 수 있는 ZIP �
 pnpm format
 ```
 
-`Biome` 과 `tsc --noEmit` 을 실행합니다.
+`Biome` 으로 포맷팅과 린트를 실행합니다(unsafe 수정도 적용). 타입 검사는 `pnpm typecheck` 로 실행할 수 있습니다.
 
 ---
 
 ## 스크립트 목록
 
-| 명령어             | 설명                              |
-| ------------------ | --------------------------------- |
-| `pnpm dev`         | 개발 서버 시작                    |
-| `pnpm build`       | `output/` 에 프로덕션 빌드        |
-| `pnpm zip`         | Chrome용 ZIP 생성                 |
-| `pnpm zip:firefox` | Firefox용 ZIP 생성                |
-| `pnpm format`      | 코드 포맷팅                       |
+| 명령어               | 설명                          |
+| -------------------- | ----------------------------- |
+| `pnpm dev`           | 개발 서버 시작                |
+| `pnpm dev:firefox`   | Firefox용 개발 서버 시작      |
+| `pnpm build`         | `output/` 에 프로덕션 빌드    |
+| `pnpm build:firefox` | Firefox용 프로덕션 빌드       |
+| `pnpm zip`           | Chrome용 ZIP 생성             |
+| `pnpm zip:firefox`   | Firefox용 ZIP 생성            |
+| `pnpm typecheck`     | `tsc --noEmit` 으로 타입 검사 |
+| `pnpm format`        | 코드 포맷팅                   |
 
 ---
 

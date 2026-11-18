@@ -35,6 +35,8 @@ Run `pnpm typecheck` and `pnpm format` before committing.
 - Modules in `utils/` are auto-imported; no explicit import needed.
 - Generated types live in `.wxt/` and are created by `wxt prepare`
   (runs automatically on `pnpm install`).
-- Use the `browser` global (webextension-polyfill) instead of `chrome` for
-  cross-browser compatibility.
+- Use the `browser` global (from `wxt/browser`, auto-imported) instead of
+  `chrome` for cross-browser compatibility. No polyfill is used: the minimum
+  supported Chrome version is 148, so `runtime.onMessage` listeners can return
+  a Promise natively.
 - `output/` is build output — never edit or commit it.

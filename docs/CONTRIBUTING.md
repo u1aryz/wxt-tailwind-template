@@ -21,10 +21,10 @@ uphold it.
 ## Prerequisites
 
 - [Node.js](https://nodejs.org/) >= 22
-- [pnpm](https://pnpm.io/) 11 (see `devEngines.packageManager` in
+- [pnpm](https://pnpm.io/) 12 (see `devEngines.packageManager` in
   `package.json`)
 
-Any compatible pnpm 11 version can be used. A version mismatch does not trigger
+Any compatible pnpm 12 version can be used. A version mismatch does not trigger
 an automatic package-manager download.
 
 ## Development Setup
@@ -44,8 +44,8 @@ an automatic package-manager download.
    ```
 
    This also installs the [lefthook](https://github.com/evilmartians/lefthook)
-   git hooks (via the `prepare` script) and runs `wxt prepare` (via the
-   `postinstall` script).
+   git hooks (via lefthook's own `postinstall`) and runs `wxt prepare` (via
+   the `postinstall` script).
 
 3. Start the dev server:
 
@@ -56,11 +56,11 @@ an automatic package-manager download.
 
 ## Useful Scripts
 
-| Command          | Description                                  |
-| ---------------- | -------------------------------------------- |
-| `pnpm dev`       | Start development server                     |
-| `pnpm build`     | Production build to `output/`                |
-| `pnpm typecheck` | Type-check with `tsc --noEmit`               |
+| Command          | Description                                        |
+| ---------------- | -------------------------------------------------- |
+| `pnpm dev`       | Start development server                           |
+| `pnpm build`     | Production build to `output/`                      |
+| `pnpm typecheck` | Type-check with `tsc --noEmit`                     |
 | `pnpm format`    | Format and lint with [Biome](https://biomejs.dev/) |
 
 ## Coding Style
@@ -99,7 +99,8 @@ This is enforced by [commitlint](https://commitlint.js.org/) via the
 2. Make your changes and make sure the following pass locally:
 
    ```bash
-   pnpm biome check
+   pnpm biome ci --error-on-warnings
+   node --test .github/scripts/*.test.mjs
    pnpm typecheck
    pnpm build
    ```

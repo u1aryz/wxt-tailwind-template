@@ -14,7 +14,7 @@
 ## 前置要求
 
 - [Node.js](https://nodejs.org/) >= 22
-- [pnpm](https://pnpm.io/)
+- [pnpm](https://pnpm.io/) 12
 
 ---
 
@@ -25,8 +25,11 @@
 ```bash
 pnpm dlx degit u1aryz/wxt-tailwind-template my-extension
 cd my-extension
+git init
 pnpm install
 ```
+
+请在 `pnpm install` 之前运行 `git init`,以便安装 Git 钩子(Biome 检查和 commitlint)。如果已经运行过 `pnpm install`,请运行 `pnpm lefthook install`。
 
 ### 2. 启动开发服务器
 
@@ -60,19 +63,22 @@ pnpm zip:firefox    # Firefox
 pnpm format
 ```
 
-运行 `Biome` 和 `tsc --noEmit`。
+使用 `Biome` 进行格式化和 lint(也会应用 unsafe 修复)。类型检查请运行 `pnpm typecheck`。
 
 ---
 
 ## 脚本参考
 
-| 命令               | 说明                          |
-| ------------------ | ----------------------------- |
-| `pnpm dev`         | 启动开发服务器                |
-| `pnpm build`       | 生产构建到 `output/`          |
-| `pnpm zip`         | 为 Chrome 打包 ZIP            |
-| `pnpm zip:firefox` | 为 Firefox 打包 ZIP           |
-| `pnpm format`      | 格式化代码                    |
+| 命令                 | 说明                             |
+| -------------------- | -------------------------------- |
+| `pnpm dev`           | 启动开发服务器                   |
+| `pnpm dev:firefox`   | 启动开发服务器(Firefox)          |
+| `pnpm build`         | 生产构建到 `output/`             |
+| `pnpm build:firefox` | 为 Firefox 进行生产构建          |
+| `pnpm zip`           | 为 Chrome 打包 ZIP               |
+| `pnpm zip:firefox`   | 为 Firefox 打包 ZIP              |
+| `pnpm typecheck`     | 使用 `tsc --noEmit` 进行类型检查 |
+| `pnpm format`        | 格式化代码                       |
 
 ---
 

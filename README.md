@@ -14,7 +14,7 @@ A minimal starter kit for building browser extensions with **[WXT](https://wxt.d
 ## Prerequisites
 
 - [Node.js](https://nodejs.org/) >= 22
-- [pnpm](https://pnpm.io/)
+- [pnpm](https://pnpm.io/) 12
 
 ---
 
@@ -25,8 +25,11 @@ A minimal starter kit for building browser extensions with **[WXT](https://wxt.d
 ```bash
 pnpm dlx degit u1aryz/wxt-tailwind-template#daisyui my-extension
 cd my-extension
+git init
 pnpm install
 ```
+
+Run `git init` before `pnpm install` so that the Git hooks (Biome check and commitlint) are installed. If you have already run `pnpm install`, run `pnpm lefthook install`.
 
 ### 2. Start the dev server
 
@@ -60,19 +63,22 @@ Generates ZIP files ready to upload to Chrome Web Store or Firefox Add-ons.
 pnpm format
 ```
 
-Runs `Biome` and `tsc --noEmit`.
+Formats and lints the code with `Biome` (including unsafe fixes). To type-check, run `pnpm typecheck`.
 
 ---
 
 ## Scripts Reference
 
-| Command            | Description                   |
-| ------------------ | ----------------------------- |
-| `pnpm dev`         | Start development server      |
-| `pnpm build`       | Production build to `output/` |
-| `pnpm zip`         | Zip for Chrome                |
-| `pnpm zip:firefox` | Zip for Firefox               |
-| `pnpm format`      | Format code                   |
+| Command              | Description                        |
+| -------------------- | ---------------------------------- |
+| `pnpm dev`           | Start development server           |
+| `pnpm dev:firefox`   | Start development server (Firefox) |
+| `pnpm build`         | Production build to `output/`      |
+| `pnpm build:firefox` | Production build for Firefox       |
+| `pnpm zip`           | Zip for Chrome                     |
+| `pnpm zip:firefox`   | Zip for Firefox                    |
+| `pnpm typecheck`     | Type-check with `tsc --noEmit`     |
+| `pnpm format`        | Format code                        |
 
 ---
 

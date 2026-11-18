@@ -14,7 +14,7 @@ Un kit de inicio minimalista para construir extensiones de navegador con **[WXT]
 ## Requisitos previos
 
 - [Node.js](https://nodejs.org/) >= 22
-- [pnpm](https://pnpm.io/)
+- [pnpm](https://pnpm.io/) 12
 
 ---
 
@@ -25,8 +25,11 @@ Un kit de inicio minimalista para construir extensiones de navegador con **[WXT]
 ```bash
 pnpm dlx degit u1aryz/wxt-tailwind-template my-extension
 cd my-extension
+git init
 pnpm install
 ```
+
+Ejecuta `git init` antes de `pnpm install` para que se instalen los hooks de Git (Biome y commitlint). Si ya ejecutaste `pnpm install`, ejecuta `pnpm lefthook install`.
 
 ### 2. Iniciar el servidor de desarrollo
 
@@ -60,19 +63,22 @@ Genera archivos ZIP listos para subir a Chrome Web Store o Firefox Add-ons.
 pnpm format
 ```
 
-Ejecuta `Biome` y `tsc --noEmit`.
+Formatea y analiza el código con `Biome` (aplicando también correcciones unsafe). Para comprobar los tipos, ejecuta `pnpm typecheck`.
 
 ---
 
 ## Referencia de scripts
 
-| Comando            | Descripción                          |
-| ------------------ | ------------------------------------ |
-| `pnpm dev`         | Iniciar el servidor de desarrollo    |
-| `pnpm build`       | Build de producción en `output/`     |
-| `pnpm zip`         | ZIP para Chrome                      |
-| `pnpm zip:firefox` | ZIP para Firefox                     |
-| `pnpm format`      | Formatear el código                  |
+| Comando              | Descripción                                 |
+| -------------------- | ------------------------------------------- |
+| `pnpm dev`           | Iniciar el servidor de desarrollo           |
+| `pnpm dev:firefox`   | Iniciar el servidor de desarrollo (Firefox) |
+| `pnpm build`         | Build de producción en `output/`            |
+| `pnpm build:firefox` | Build de producción para Firefox            |
+| `pnpm zip`           | ZIP para Chrome                             |
+| `pnpm zip:firefox`   | ZIP para Firefox                            |
+| `pnpm typecheck`     | Comprobar tipos con `tsc --noEmit`          |
+| `pnpm format`        | Formatear el código                         |
 
 ---
 

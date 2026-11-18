@@ -1,5 +1,3 @@
-import { t } from "@/utils/i18n";
-
 function App() {
 	return (
 		<div className="flex w-40 flex-col gap-2 p-4">

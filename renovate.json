@@ -3,5 +3,12 @@
 	"extends": ["config:best-practices", "customManagers:biomeVersions"],
 	"minimumReleaseAge": "3 days",
 	"platformAutomerge": false,
-	"automerge": true
+	"automerge": true,
+	"packageRules": [
+		{
+			"description": "Digest and lock file maintenance updates have no release timestamp, so the minimum release age check would stay pending forever.",
+			"matchUpdateTypes": ["digest", "pinDigest", "lockFileMaintenance"],
+			"minimumReleaseAgeBehaviour": "timestamp-optional"
+		}
+	]
 }
