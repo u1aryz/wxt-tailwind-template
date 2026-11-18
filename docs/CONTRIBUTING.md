@@ -44,8 +44,8 @@ an automatic package-manager download.
    ```
 
    This also installs the [lefthook](https://github.com/evilmartians/lefthook)
-   git hooks (via the `prepare` script) and runs `wxt prepare` (via the
-   `postinstall` script).
+   git hooks (via lefthook's own `postinstall`) and runs `wxt prepare` (via
+   the `postinstall` script).
 
 3. Start the dev server:
 
