@@ -99,7 +99,8 @@ This is enforced by [commitlint](https://commitlint.js.org/) via the
 2. Make your changes and make sure the following pass locally:
 
    ```bash
-   pnpm biome check
+   pnpm biome ci --error-on-warnings
+   node --test .github/scripts/*.test.mjs
    pnpm typecheck
    pnpm build
    ```

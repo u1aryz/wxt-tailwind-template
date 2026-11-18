@@ -19,7 +19,8 @@ jobs:
           node-version-file: package.json
           cache: pnpm
       - run: pnpm install --frozen-lockfile
-      - run: pnpm biome check
-      - run: node --test .github/scripts/*.test.mjs
+      - run: pnpm biome ci --error-on-warnings
+      - if: hashFiles('.github/scripts/*.test.mjs') != ''
+        run: node --test .github/scripts/*.test.mjs
       - run: pnpm typecheck
       - run: pnpm build
