@@ -13,7 +13,7 @@
 
 ## 前提条件
 
-- [Node.js](https://nodejs.org/) >= 22
+- [Node.js](https://nodejs.org/) `^22.18.0 || ^24.11.0 || >=26.0.0`
 - [pnpm](https://pnpm.io/) 12
 
 ---
@@ -29,7 +29,7 @@ git init
 pnpm install
 ```
 
-`pnpm install` の前に `git init` を実行すると、Git フック(Biome チェックと commitlint)がインストールされます。すでに `pnpm install` を実行済みの場合は `pnpm lefthook install` を実行してください。
+`pnpm install` の前に `git init` を実行すると、Git フック(Vite+ チェックと commitlint)がインストールされます。すでに `pnpm install` を実行済みの場合は `pnpm lefthook install` を実行してください。
 
 ### 2. 開発サーバーを起動する
 
@@ -57,28 +57,27 @@ pnpm zip:firefox    # Firefox
 
 Chrome Web Store や Firefox Add-ons にそのままアップロードできる ZIP ファイルを生成します。
 
-### 5. ソースコードをフォーマットする
+### 5. ソースコードをチェックする
 
 ```bash
-pnpm format
+pnpm check
 ```
 
-`Biome` でフォーマットと lint を実行します(unsafe な修正も適用します)。型チェックは `pnpm typecheck` で実行できます。
+[Vite+](https://viteplus.dev/) の `vp check --fix` を実行し、フォーマット(Oxfmt)・lint(Oxlint)・型チェックをまとめて行います。安全な修正は自動で適用されます。
 
 ---
 
 ## スクリプト一覧
 
-| コマンド             | 説明                               |
-| -------------------- | ---------------------------------- |
-| `pnpm dev`           | 開発サーバーを起動                 |
-| `pnpm dev:firefox`   | Firefox で開発サーバーを起動       |
-| `pnpm build`         | `output/` へプロダクションビルド   |
-| `pnpm build:firefox` | Firefox 向けにプロダクションビルド |
-| `pnpm zip`           | Chrome 向けに ZIP 化               |
-| `pnpm zip:firefox`   | Firefox 向けに ZIP 化              |
-| `pnpm typecheck`     | `tsc --noEmit` で型チェック        |
-| `pnpm format`        | コードをフォーマット               |
+| コマンド             | 説明                                         |
+| -------------------- | -------------------------------------------- |
+| `pnpm dev`           | 開発サーバーを起動                           |
+| `pnpm dev:firefox`   | Firefox で開発サーバーを起動                 |
+| `pnpm build`         | `output/` へプロダクションビルド             |
+| `pnpm build:firefox` | Firefox 向けにプロダクションビルド           |
+| `pnpm zip`           | Chrome 向けに ZIP 化                         |
+| `pnpm zip:firefox`   | Firefox 向けに ZIP 化                        |
+| `pnpm check`         | フォーマット・lint・型チェック(自動修正あり) |
 
 ---
 

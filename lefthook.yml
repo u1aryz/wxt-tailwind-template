@@ -1,7 +1,8 @@
 pre-commit:
   commands:
     check:
-      run: pnpm biome check --write --error-on-warnings --no-errors-on-unmatched --files-ignore-unknown=true {staged_files} && pnpm typecheck
+      # Format, lint, and type-check staged files, then type-check the whole project.
+      run: pnpm vp check --fix --deny-warnings {staged_files} && pnpm vp check --no-fmt --no-lint
       stage_fixed: true
 
 commit-msg:

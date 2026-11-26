@@ -5,26 +5,29 @@ Guidance for AI coding agents working in this repository.
 ## Project Overview
 
 A browser extension built with [WXT](https://wxt.dev/), React 19, and Tailwind CSS 4.
-Requires **Node.js >= 22** and **pnpm** (do not use npm or yarn).
+Requires **Node.js `^22.18.0 || ^24.11.0 || >=26.0.0`** and **pnpm** (do not use npm or yarn).
 
 ## Commands
 
-| Command          | Description                                     |
-| ---------------- | ----------------------------------------------- |
-| `pnpm dev`       | Start dev server (Chromium, hot-reload)         |
-| `pnpm build`     | Production build to `output/`                   |
-| `pnpm zip`       | Package for Chrome (`zip:firefox` for Firefox)  |
-| `pnpm typecheck` | Type-check with `tsc --noEmit`                  |
-| `pnpm format`    | Format and lint with Biome (`--write --unsafe`) |
+| Command      | Description                                                |
+| ------------ | ---------------------------------------------------------- |
+| `pnpm dev`   | Start dev server (Chromium, hot-reload)                    |
+| `pnpm build` | Production build to `output/`                              |
+| `pnpm zip`   | Package for Chrome (`zip:firefox` for Firefox)             |
+| `pnpm check` | Format, lint, and type-check with Vite+ (`vp check --fix`) |
 
-Run `pnpm typecheck` and `pnpm format` before committing.
+Run `pnpm check` before committing.
 
 ## Conventions
 
 - **Commits**: Conventional Commits are enforced by commitlint via a lefthook
   `commit-msg` hook (e.g. `feat: ...`, `fix: ...`, `chore(deps): ...`).
-- **Formatting/linting**: Biome (`biome.json`) — tab indentation, double quotes.
-  Do not add ESLint or Prettier.
+- **Formatting/linting/type checking**: [Vite+](https://viteplus.dev/)
+  (`vp check` = Oxfmt + Oxlint + type check), configured in the `fmt` and
+  `lint` blocks of `vite.config.ts` — tab indentation, double quotes.
+  `vite.config.ts` is only for Vite+ tooling; build settings belong in
+  `wxt.config.ts`. Do not add ESLint, Prettier, Biome, or a direct
+  `typescript` dependency.
 - **Styling**: Tailwind CSS v4. Global styles live in `assets/tailwind.css`
   (imported via `@import "tailwindcss"`); there is no `tailwind.config` file.
 

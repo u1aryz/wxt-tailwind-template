@@ -13,7 +13,7 @@ A minimal starter kit for building browser extensions with **[WXT](https://wxt.d
 
 ## Prerequisites
 
-- [Node.js](https://nodejs.org/) >= 22
+- [Node.js](https://nodejs.org/) `^22.18.0 || ^24.11.0 || >=26.0.0`
 - [pnpm](https://pnpm.io/) 12
 
 ---
@@ -29,7 +29,7 @@ git init
 pnpm install
 ```
 
-Run `git init` before `pnpm install` so that the Git hooks (Biome check and commitlint) are installed. If you have already run `pnpm install`, run `pnpm lefthook install`.
+Run `git init` before `pnpm install` so that the Git hooks (Vite+ check and commitlint) are installed. If you have already run `pnpm install`, run `pnpm lefthook install`.
 
 ### 2. Start the dev server
 
@@ -57,28 +57,27 @@ pnpm zip:firefox    # Firefox
 
 Generates ZIP files ready to upload to Chrome Web Store or Firefox Add-ons.
 
-### 5. Format source code
+### 5. Check source code
 
 ```bash
-pnpm format
+pnpm check
 ```
 
-Formats and lints the code with `Biome` (including unsafe fixes). To type-check, run `pnpm typecheck`.
+Runs `vp check --fix` from [Vite+](https://viteplus.dev/): formats (Oxfmt), lints (Oxlint), and type-checks the code in one pass, applying safe fixes.
 
 ---
 
 ## Scripts Reference
 
-| Command              | Description                        |
-| -------------------- | ---------------------------------- |
-| `pnpm dev`           | Start development server           |
-| `pnpm dev:firefox`   | Start development server (Firefox) |
-| `pnpm build`         | Production build to `output/`      |
-| `pnpm build:firefox` | Production build for Firefox       |
-| `pnpm zip`           | Zip for Chrome                     |
-| `pnpm zip:firefox`   | Zip for Firefox                    |
-| `pnpm typecheck`     | Type-check with `tsc --noEmit`     |
-| `pnpm format`        | Format code                        |
+| Command              | Description                                 |
+| -------------------- | ------------------------------------------- |
+| `pnpm dev`           | Start development server                    |
+| `pnpm dev:firefox`   | Start development server (Firefox)          |
+| `pnpm build`         | Production build to `output/`               |
+| `pnpm build:firefox` | Production build for Firefox                |
+| `pnpm zip`           | Zip for Chrome                              |
+| `pnpm zip:firefox`   | Zip for Firefox                             |
+| `pnpm check`         | Format, lint, and type-check (with autofix) |
 
 ---
 

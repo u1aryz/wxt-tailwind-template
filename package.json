@@ -5,7 +5,7 @@
 	"version": "0.0.1",
 	"type": "module",
 	"engines": {
-		"node": ">=22"
+		"node": "^22.18.0 || ^24.11.0 || >=26.0.0"
 	},
 	"devEngines": {
 		"packageManager": {
@@ -21,8 +21,7 @@
 		"build:firefox": "wxt build -b firefox",
 		"zip": "wxt zip",
 		"zip:firefox": "wxt zip -b firefox",
-		"typecheck": "tsc --noEmit",
-		"format": "biome check --write --unsafe",
+		"check": "vp check --fix",
 		"postinstall": "wxt prepare"
 	},
 	"dependencies": {
@@ -30,7 +29,6 @@
 		"react-dom": "^19.1.0"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "2.6.8",
 		"@commitlint/cli": "21.2.4",
 		"@commitlint/config-conventional": "21.2.4",
 		"@commitlint/types": "21.2.3",
@@ -41,7 +39,7 @@
 		"@wxt-dev/module-react": "1.2.2",
 		"lefthook": "2.2.2",
 		"tailwindcss": "4.3.5",
-		"typescript": "7.0.2",
+		"vite-plus": "catalog:",
 		"web-ext": "10.8.0",
 		"wxt": "0.21.5"
 	}
