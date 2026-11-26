@@ -56,17 +56,17 @@ an automatic package-manager download.
 
 ## Useful Scripts
 
-| Command          | Description                                        |
-| ---------------- | -------------------------------------------------- |
-| `pnpm dev`       | Start development server                           |
-| `pnpm build`     | Production build to `output/`                      |
-| `pnpm typecheck` | Type-check with `tsc --noEmit`                     |
-| `pnpm format`    | Format and lint with [Biome](https://biomejs.dev/) |
+| Command      | Description                                                                         |
+| ------------ | ----------------------------------------------------------------------------------- |
+| `pnpm dev`   | Start development server                                                            |
+| `pnpm build` | Production build to `output/`                                                       |
+| `pnpm check` | Format, lint, and type-check with [Vite+](https://viteplus.dev/) (`vp check --fix`) |
 
 ## Coding Style
 
-This project uses [Biome](https://biomejs.dev/) for formatting and linting
-(see `biome.json`). Run `pnpm format` before committing, or rely on the
+This project uses [Vite+](https://viteplus.dev/) for formatting (Oxfmt),
+linting (Oxlint), and type checking (see the `fmt` and `lint` blocks in
+`vite.config.ts`). Run `pnpm check` before committing, or rely on the
 pre-commit hook described below.
 
 ## Commit Convention
@@ -89,8 +89,8 @@ This is enforced by [commitlint](https://commitlint.js.org/) via the
 
 [lefthook](https://github.com/evilmartians/lefthook) runs automatically:
 
-- **pre-commit**: Biome check (with autofix on staged files) and
-  `tsc --noEmit`
+- **pre-commit**: `vp check --fix` on staged files and a project-wide type
+  check
 - **commit-msg**: commitlint validation
 
 ## Pull Request Flow
@@ -99,9 +99,8 @@ This is enforced by [commitlint](https://commitlint.js.org/) via the
 2. Make your changes and make sure the following pass locally:
 
    ```bash
-   pnpm biome ci --error-on-warnings
+   pnpm vp check --deny-warnings
    node --test .github/scripts/*.test.mjs
-   pnpm typecheck
    pnpm build
    ```
 

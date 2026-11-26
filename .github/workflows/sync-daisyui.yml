@@ -72,10 +72,9 @@ jobs:
       # branch here before pushing it.
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
-      - run: pnpm biome ci --error-on-warnings
+      - run: pnpm vp check --deny-warnings
       - if: hashFiles('.github/scripts/*.test.mjs') != ''
         run: node --test .github/scripts/*.test.mjs
-      - run: pnpm typecheck
       - run: pnpm build
 
       - name: Push daisyui

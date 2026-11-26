@@ -5,6 +5,7 @@ import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { test } from "node:test";
 import { fileURLToPath } from "node:url";
+
 import { mergeJson } from "./merge-package-json.mjs";
 
 test("preserves branch dependencies and applies main dependency updates", () => {

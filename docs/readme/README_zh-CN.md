@@ -13,7 +13,7 @@
 
 ## 前置要求
 
-- [Node.js](https://nodejs.org/) >= 22
+- [Node.js](https://nodejs.org/) `^22.18.0 || ^24.11.0 || >=26.0.0`
 - [pnpm](https://pnpm.io/) 12
 
 ---
@@ -29,7 +29,7 @@ git init
 pnpm install
 ```
 
-请在 `pnpm install` 之前运行 `git init`,以便安装 Git 钩子(Biome 检查和 commitlint)。如果已经运行过 `pnpm install`,请运行 `pnpm lefthook install`。
+请在 `pnpm install` 之前运行 `git init`,以便安装 Git 钩子(Vite+ 检查和 commitlint)。如果已经运行过 `pnpm install`,请运行 `pnpm lefthook install`。
 
 ### 2. 启动开发服务器
 
@@ -57,28 +57,27 @@ pnpm zip:firefox    # Firefox
 
 生成可直接上传到 Chrome Web Store 或 Firefox Add-ons 的 ZIP 文件。
 
-### 5. 格式化源代码
+### 5. 检查源代码
 
 ```bash
-pnpm format
+pnpm check
 ```
 
-使用 `Biome` 进行格式化和 lint(也会应用 unsafe 修复)。类型检查请运行 `pnpm typecheck`。
+运行 [Vite+](https://viteplus.dev/) 的 `vp check --fix`,一次性完成格式化(Oxfmt)、lint(Oxlint)和类型检查,并自动应用安全的修复。
 
 ---
 
 ## 脚本参考
 
-| 命令                 | 说明                             |
-| -------------------- | -------------------------------- |
-| `pnpm dev`           | 启动开发服务器                   |
-| `pnpm dev:firefox`   | 启动开发服务器(Firefox)          |
-| `pnpm build`         | 生产构建到 `output/`             |
-| `pnpm build:firefox` | 为 Firefox 进行生产构建          |
-| `pnpm zip`           | 为 Chrome 打包 ZIP               |
-| `pnpm zip:firefox`   | 为 Firefox 打包 ZIP              |
-| `pnpm typecheck`     | 使用 `tsc --noEmit` 进行类型检查 |
-| `pnpm format`        | 格式化代码                       |
+| 命令                 | 说明                              |
+| -------------------- | --------------------------------- |
+| `pnpm dev`           | 启动开发服务器                    |
+| `pnpm dev:firefox`   | 启动开发服务器(Firefox)           |
+| `pnpm build`         | 生产构建到 `output/`              |
+| `pnpm build:firefox` | 为 Firefox 进行生产构建           |
+| `pnpm zip`           | 为 Chrome 打包 ZIP                |
+| `pnpm zip:firefox`   | 为 Firefox 打包 ZIP               |
+| `pnpm check`         | 格式化、lint 和类型检查(自动修复) |
 
 ---
 
